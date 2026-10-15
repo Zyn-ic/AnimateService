@@ -1,0 +1,82 @@
+site_name: AnimateService
+site_description: Drop-in replacement for Roblox's default Animate — LoadedBin dedup, 0.1ms preload dispatch, marker fanout, partial-body combat.
+site_author: yyumchi
+site_url: https://zyn-ic.github.io/AnimateService/
+repo_url: https://github.com/Zyn-ic/AnimateService
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
+
+nav:
+  - Home: index.md
+  - Start Here:
+    - Quickstart (60 seconds): quickstart.md
+    - Life of a Swing: life-of-a-swing.md
+    - Glossary: glossary.md
+  - Concepts:
+    - Architecture: architecture.md
+    - Priority & Partial-Body: priority.md
+    - Core Concepts: concepts.md
+    - Death & Respawn: lifecycle.md
+  - Build:
+    - Signal Catalog: signals.md
+    - Module Mode: module-mode.md
+    - Combat Recipes: recipes.md
+    - Profiles & Overlays: profiles.md
+    - Markers & Fanout: markers.md
+    - Adding Animations: adding.md
+  - Reference:
+    - Controller API: api/controller.md
+    - Rig API: api/rig.md
+    - Config Reference: api/config.md
+    - Benchmarks: benchmarks.md
+  - Help:
+    - Tests: tests.md
+    - Troubleshooting: troubleshooting.md
+    - Limits & Roadmap: limits.md
